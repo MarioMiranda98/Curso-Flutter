@@ -1,0 +1,27 @@
+void main() {
+  final cuadrado = new Cuadrado();
+  cuadrado._lado = 10;
+  print(cuadrado);
+  print("Area = ${cuadrado.getArea}" );
+}
+
+class Cuadrado {
+  //Con el guion bajo se vuelven privadas
+  double _lado; 
+  //double _area; 
+  
+  //Setters
+  set setLado(double valor) {
+    if (valor <= 0) {
+      throw("El lado no puede ser menor o igual a 0");
+    }  
+    
+    _lado = valor;
+  }
+  
+  //Getters
+  double get getArea => (_lado * _lado);
+ 
+  
+  String toString() => "Lado = $_lado";
+}

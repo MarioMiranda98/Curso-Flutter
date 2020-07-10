@@ -1,0 +1,27 @@
+void main() {
+  final Perro perro = new Perro();
+  final Gato gato = new Gato();
+  
+  perro.emitirSonido();
+  gato.emitirSonido();
+}
+
+//Declarando clases abstractas, sirve para obligar otras clases que implmementen los metodos y propiedades
+abstract class Animal {
+  int patas;
+  void emitirSonido();
+}
+
+//Clase que exitiende
+class Perro implements Animal {
+  int patas;
+  int colas;
+
+  void emitirSonido() => print("Guau!!");
+}
+
+class Gato implements Animal {
+  int patas;
+  
+  void emitirSonido() => print("Miauuu!!");
+}

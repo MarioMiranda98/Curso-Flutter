@@ -1,0 +1,17 @@
+void main() {
+  //List numeros = [1, 2, 3, 4, 5]; //Declarando una lista
+  List<int> numeros = [1, 2, 3, 4, 5];//Lista tipada
+  print(numeros);
+  
+  //Añadiendo elementos
+  numeros.add(6); //Si no se restringe el tipo de la lista puede aceptar cualquier cosa
+  print(numeros);
+  //numeros.add("Hola mundo");
+  //print(numeros);
+  
+  //Para tamaño fijo
+  List<int> numerosFijos = List(10);
+  print(numerosFijos);
+  numerosFijos[0] = 1;//Para guardar elementos fijos
+  print(numerosFijos);
+}

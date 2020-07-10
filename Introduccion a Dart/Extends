@@ -1,0 +1,23 @@
+void main() {
+  final Heroe superman = new Heroe();
+  superman.nombre = "Clark Kent";
+   
+  final Villano lutor = new Villano();
+  lutor.nombre = "Lex Lutor";
+  
+}
+
+//Clase a heredar
+abstract class Personaje {
+  String nombre;
+  String poder;
+}
+
+//La clase Heroe hereda (Extends) de personje
+class Heroe extends Personaje {
+  int valentia;
+}
+
+class Villano extends Personaje {
+  int maldad;
+}

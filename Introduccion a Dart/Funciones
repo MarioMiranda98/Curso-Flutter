@@ -1,0 +1,34 @@
+void main() {
+  saludar();//Llamando a la funcion
+  print(saludarRetorno());
+  print(saludo("Hola, que tal?", "Mario"));
+  
+  //Llamando funcion con parametros con nombre
+  //Con esto el orden de los parametros se vuelve irrelevante
+  print(saludoNombre(texto : "Hello my friend", nombre: "Mario"));
+  print(saludoNombre(nombre: "Mario", texto : "Hello my friend"));
+  print(saludoNombres(texto : "Hello my friend", nombre: "Mario"));
+}
+
+//Definiendo a la funcion sin retorno
+void saludar() {
+  print("Hola mundo");
+}
+
+//Funcion con retorno
+String saludarRetorno() {
+  return "Hola mundo desde el retorno";
+}
+
+//Funcion con retorno y parametros
+String saludo(String texto, String nombre) {
+  return "$texto $nombre";
+}
+
+//Funcion con retorno y parametros con nombre
+String saludoNombre({String texto, String nombre}) {
+  return "$texto $nombre";
+}
+
+//Funcion de flecha
+String saludoNombres({String texto, String nombre}) => "$texto $nombre";

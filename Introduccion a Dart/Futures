@@ -1,0 +1,16 @@
+void main() {
+  //Utilizando el future
+  print("Estamos a punto de pedir datos");
+  httpGet("https://api.nada.com/aliens").then((data) {
+    print(data);
+  });
+  print("Ultima linea");
+}
+
+//Simulando una peticion http
+//Para declarar un Future, si no se especifica es generico
+Future<String> httpGet(String url) {
+  return Future.delayed(new Duration(seconds : 4), () {
+    return "Hola mundo";
+  });
+}

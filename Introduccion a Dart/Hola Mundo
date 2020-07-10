@@ -1,0 +1,8 @@
+void main() {
+  print("Hola mundo"); // print para imprimir, todo acaba con ;
+  var nombre = "Mario"; //declarando variables
+  print("Hola " + nombre); //Para concatenar Strings
+  print("Hola $nombre"); //Interpolando Strings (Similar a PHP)
+  
+  String nombres;//Declarando Strings Tipados
+}

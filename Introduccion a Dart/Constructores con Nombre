@@ -1,0 +1,28 @@
+import 'dart:convert';
+
+void main() {
+//   final Heroe wolverine = new Heroe(nombre : "Logan", poder: "Regeneracion");
+  
+  final String rawJSON = '{"nombre" : "Logan", "poder" : "regeneracion"}';
+  
+  final Map parsedJSON = json.decode(rawJSON);
+  
+  //print(parsedJSON);
+  //Creandolo desde un JSON
+  final Heroe wolverine = new Heroe.fromJson(parsedJSON);
+  
+  print(wolverine.nombre);
+  print(wolverine.poder);
+}
+
+class Heroe {
+  Heroe({this.nombre, this.poder});
+  //Constructor con nombre
+  Heroe.fromJson(parsedJson) {
+    this.nombre = parsedJson['nombre'];
+    this.poder = parsedJson['poder'];
+  }
+  
+  String nombre;
+  String poder;
+}

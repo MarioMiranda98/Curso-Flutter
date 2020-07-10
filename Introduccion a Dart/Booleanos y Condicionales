@@ -1,0 +1,12 @@
+void main() {
+  bool activado = true;
+  
+  print(activado);//Mostrara true
+  print(!activado);//Mostrara false por la negacion (!)
+  
+  if(activado) {//Condicional basico
+    print("El boton esta activado");
+  } else {
+    print("El boton esta desactivado");
+  }
+}

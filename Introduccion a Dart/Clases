@@ -1,0 +1,30 @@
+void main() {
+  final Heroe wolverine = new Heroe(nombre : "Logan", poder : "Regeneracion");//Creando objetos
+  
+  print(wolverine);
+  print(wolverine.poder);//Accediendo a propiedades
+}
+
+//Definiendo clases
+class Heroe {
+  //Constructor de la clase
+//   Heroe({String nombre, String poder}) {
+//     this.nombre = nombre;
+//     this.poder = poder;
+//   }
+  
+  //Forma corta de definicion
+  Heroe({this.nombre, this.poder});
+  
+  //Metodos
+//   String toString() {
+//     return "nombre: ${this.nombre} - poder: ${this.poder}";
+//   }
+  
+  //Forma corta del toString
+  String toString() => "nombre: ${this.nombre} - poder: ${this.poder}";
+  
+  //Propiedades de la clase
+  String nombre;
+  String poder;
+}

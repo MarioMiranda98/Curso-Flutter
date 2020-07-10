@@ -1,0 +1,34 @@
+void main() {
+  //Declarando un mapa dinamico
+  Map persona = {
+    "Nombre" : "Mario",
+    "edad" : 21,
+    "Soltero" : true 
+  };
+  
+  //Declarando un mapa tipado
+  Map<String, dynamic> persona2 ={
+     "Nombre" : "Mario del Futuro",
+     "edad" : 22,
+     "Soltero" : false
+  };
+  
+  //Accediendo a elementos del diccionario
+  print(persona['Nombre']);
+  print(persona['edad']);
+  String propiedad = "Soltero";
+  print(persona2[propiedad]);
+  
+  //Miscelaneo
+  Map<int, String> personas = {
+    1 : 'Tony',
+    2 : 'Peter',
+    9 : 'Strange'
+  };
+  
+  print(personas[2]);
+  
+  //Añadiendo elementos al mapa
+  personas.addAll({4 : "Banner"});
+  print(personas);
+}
