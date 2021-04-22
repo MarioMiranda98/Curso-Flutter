@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:peliculas/src/models/pelicula_model.dart';
 import 'package:peliculas/src/providers/peliculas_provider.dart';
 import 'package:peliculas/src/search/search_delegate.dart';
 
@@ -54,7 +55,7 @@ class HomePage extends StatelessWidget {
 
     return FutureBuilder(
       future: peliculasProvider.getEnCines(),
-      builder: (BuildContext context, AsyncSnapshot<List> snapshot) {
+      builder: (BuildContext context, AsyncSnapshot<List<Pelicula>> snapshot) {
         
         if ( snapshot.hasData ) {
           return CardSwiper( peliculas: snapshot.data );
@@ -87,13 +88,13 @@ class HomePage extends StatelessWidget {
         children: <Widget>[
           Container(
             padding: EdgeInsets.only(left: 20.0),
-            child: Text('Populares', style: Theme.of(context).textTheme.subhead  )
+            child: Text('Populares', style: Theme.of(context).textTheme.subtitle2 )
           ),
           SizedBox(height: 5.0),
 
           StreamBuilder(
             stream: peliculasProvider.popularesStream,
-            builder: (BuildContext context, AsyncSnapshot<List> snapshot) {
+            builder: (BuildContext context, AsyncSnapshot<List<Pelicula>> snapshot) {
               
               if ( snapshot.hasData ) {
                 return MovieHorizontal( 
